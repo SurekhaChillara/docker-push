@@ -14,7 +14,7 @@ pipeline{
 	    }
 	stage('Push Docker Image'){
 	    steps{
-		sh script: 'docker login -u surekhadock2020 -p ${docker-password}
+		sh script: 'docker login -u surekhadock2020 -p ${docker-password}'
                 withCredentials([string(credentialsId: 'docker_password', variable: 'docker_password')]) {
 		    sh 'docker login -u surekhadock2020 -p $docker_password'
 		    sh 'docker push surekhadock2020/dockerpipelinejob:$Docker_tag'
