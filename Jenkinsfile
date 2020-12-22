@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('Build Stage'){
             steps{
-                sh 'docker build -t surekhadock2020/dockertestpipeline .'
+                echo 'Hey there!'
             }
         }
     }
