@@ -10,7 +10,7 @@ pipeline{
         }
     stages{
 	stage('Build Docker Image'){
-	    sh 'docker build -t surekhadock2020\dockertest:Docker_tag .'
+	    sh 'docker build -t surekhadock2020/dockertest:Docker_tag .'
 	    }
 	stage('Push Docker Image'){
 	    steps{
