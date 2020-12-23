@@ -1,11 +1,9 @@
 pipeline{
     agent any
     stages{
-        stage('Build Stage'){
+        stage('Build Docker Image'){
             steps{
-                script{
-                    sh 'docker build -t surekhadock2020/dockertestpipeline:${BUILD_NUMBER} .'
-                }
+                sh 'docker build -t surekhadock2020/dockertestpipeline:${BUILD_NUMBER} . '
             }
         }
     }
